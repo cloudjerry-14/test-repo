@@ -3,7 +3,7 @@ FROM maven:3.9.4-eclipse-temurin-17 as build
 WORKDIR /app
 COPY app/demo/pom.xml .
 COPY app/demo/src ./src
-RUN mvn -B -DskipTests package
+RUN mvn clean install
 
 ## Run stage
 FROM eclipse-temurin:17-jre
