@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Building application'
                 sh 'echo Build started'
-                sh 'mvn clean install'
+                sh 'cd app/demo && mvn clean install'
             }
         }
 
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Running tests'
                 sh 'echo Test successful'
-                sh 'mvn test'
+                sh 'cd app/demo && mvn test'
             }
         }
 
